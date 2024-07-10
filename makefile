@@ -8,10 +8,11 @@ docker-build:
 docker-create-network:
 	docker network create poc-rabbit-network
 
+
 # Rabbit
 
-.PHONY: run-rabbit
-run-rabbit:
+.PHONY: rabbit-run
+rabbit-run:
 	docker run \
 		-d \
 		--rm \
@@ -20,6 +21,11 @@ run-rabbit:
 		-p 5672:5672 \
 		-p 15672:15672 \
 		rabbitmq:3.13-management
+
+.PHONY: rabbit-list-queues
+rabbit-list-queues:
+	docker exec -it rabbitmq rabbitmqctl list_queues
+
 
 # Others
 
