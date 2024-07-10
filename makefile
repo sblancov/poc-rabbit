@@ -37,3 +37,13 @@ run-send:
 		--network poc-rabbit-network \
 		poc-rabbit \
 		python hello_world/send.py
+
+.PHONY: run-receive
+run-receive:
+	@docker run \
+		--rm \
+		-it \
+		-v $(PWD)/src:/app/ \
+		--network poc-rabbit-network \
+		poc-rabbit \
+		python hello_world/receive.py
