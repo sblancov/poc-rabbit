@@ -52,6 +52,16 @@ On other shell execute:
 You can execute multiple times the send process, to see multiple
 messages received in the receive process shell.
 
+## More info
+
+You can see the stats of RabbitMQ using the web interface:
+
+    http://localhost:15672/
+
+Just, use the default credentials:
+
+    guest:guest
+
 
 ## References
 
