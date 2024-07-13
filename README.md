@@ -52,6 +52,11 @@ On other shell execute:
 You can execute multiple times the send process, to see multiple
 messages received in the receive process shell.
 
+
+## Work Queues
+
+
+
 ## More info
 
 You can see the stats of RabbitMQ using the web interface:

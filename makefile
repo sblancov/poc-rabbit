@@ -22,12 +22,27 @@ rabbit-run:
 		-p 15672:15672 \
 		rabbitmq:3.13-management
 
+.PHONY: rabbit-stop
+rabbit-stop:
+	docker stop \
+		rabbitmq
+
 .PHONY: rabbit-list-queues
 rabbit-list-queues:
-	docker exec -it rabbitmq rabbitmqctl list_queues
+	docker exec \
+		-it \
+		rabbitmq \
+		rabbitmqctl list_queues
+
+.PHONY: rabbit-messages-unacknowledged
+rabbit-messages-unacknowledged:
+	docker exec \
+		-it \
+		rabbitmq \
+		rabbitmqctl list_queues name messages_ready messages_unacknowledged
 
 
-# Others
+# Hello World
 
 .PHONY: run-send
 run-send:
@@ -47,3 +62,35 @@ run-receive:
 		--network poc-rabbit-network \
 		poc-rabbit \
 		python hello_world/receive.py
+
+
+# Work Queues
+
+.PHONY: run-new-task
+run-new-task:
+	@docker run \
+		--rm \
+		-v $(PWD)/src:/app/ \
+		--network poc-rabbit-network \
+		poc-rabbit \
+		python work_queues/new_task.py
+
+.PHONY: run-multiple-new-task
+run-multiple-new-task:
+	@$(foreach i, $(shell seq 10), \
+		docker run \
+			--rm \
+			-v $(PWD)/src:/app/ \
+			--network poc-rabbit-network \
+			poc-rabbit \
+			python work_queues/new_task.py;)
+
+.PHONY: run-worker
+run-worker:
+	@docker run \
+		--rm \
+		-it \
+		-v $(PWD)/src:/app/ \
+		--network poc-rabbit-network \
+		poc-rabbit \
+		python work_queues/worker.py
