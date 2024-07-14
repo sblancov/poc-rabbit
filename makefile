@@ -42,6 +42,13 @@ rabbit-messages-unacknowledged:
 		rabbitmqctl list_queues name messages_ready messages_unacknowledged
 
 
+.PHONY: rabbit-list-exchanges
+rabbit-list-exchanges:
+	docker exec \
+		-it \
+		rabbitmq \
+		rabbitmqctl list_exchanges
+
 # Hello World
 
 .PHONY: run-send
@@ -94,3 +101,26 @@ run-worker:
 		--network poc-rabbit-network \
 		poc-rabbit \
 		python work_queues/worker.py
+
+
+# Publish Subscribe
+
+.PHONY: run-publisher
+run-publisher:
+	@docker run \
+		--rm \
+		-it \
+		-v $(PWD)/src:/app/ \
+		--network poc-rabbit-network \
+		poc-rabbit \
+		python publish_subscribe/publisher.py
+
+.PHONY: run-subscriber
+run-subscriber:
+	@docker run \
+		--rm \
+		-it \
+		-v $(PWD)/src:/app/ \
+		--network poc-rabbit-network \
+		poc-rabbit \
+		python publish_subscribe/subscriber.py
