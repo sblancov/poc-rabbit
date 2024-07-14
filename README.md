@@ -33,65 +33,12 @@ Now, we need RabbitMQ server running, so:
     make run-rabbit
 
 And that is almost all, we can run all examples following the
-appropriate steps in each section.
+appropriate steps in each README.md:
 
-
-### Hello world
-
-On one shell execute:
-
-    make run-receive
-
-First the receiver because there will be something which will
-receive the messages sent by the other process.
-
-On other shell execute:
-
-    make run-send
-
-You can execute multiple times the send process, to see multiple
-messages received in the receive process shell.
-
-
-## Work Queues
-
-On one shell, execute:
-
-    make run-worker
-
-This is a worker, which is listening to receive a job to do.
-
-On other shell, execute:
-
-    make run-new-task
-
-This create a new task to any worker will do.
-
-More workers, more fun!
-Open multiple shells to create more workers and execute again:
-
-    make run-worker
-
-Then, in other shell:
-
-    make run-multiple-new-task
-
-This runs 10 tasks, and all workers receives in order to finish the work.
-
-
-## Publish Subscribe
-
-On multiple shells, execute:
-
-    make run-subscriber
-
-So we create several subscriber which receive the same message.
-
-Then, on other shell, execute:
-
-    make run-publisher
-
-Which publish a message. This message is shown in the all running subscribers.
+* [Hello World](./src/hello_world/README.md)
+* [Work Queues](./src/work_queues/README.md)
+* [Publish Subscribe](./src/publish_subscribe/README.md)
+* [Routing](./src/routing/README.md)
 
 
 ## More info
