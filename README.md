@@ -41,6 +41,7 @@ appropriate steps in each README.md:
 * [Work Queues](./src/work_queues/README.md)
 * [Publish Subscribe](./src/publish_subscribe/README.md)
 * [Routing](./src/routing/README.md)
+* [Topics](./src/topics/README.md)
 
 
 ## More info
