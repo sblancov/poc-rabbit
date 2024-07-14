@@ -1,5 +1,7 @@
 # Publish Subscribe
 
+## Schema
+
 ```mermaid
 flowchart LR
     publiserA --> Exchange
@@ -7,6 +9,8 @@ flowchart LR
     Exchange --> SubscriberB
     Exchange --> SubscriberC
 ```
+
+## Running
 
 On multiple shells, execute:
 

@@ -1,5 +1,6 @@
 # Work Queues
 
+## Schema
 
 ```mermaid
 flowchart LR
@@ -8,6 +9,7 @@ flowchart LR
     Exchange --> SlaveB
 ```
 
+## Running
 
 On one shell, execute:
 

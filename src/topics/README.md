@@ -2,6 +2,8 @@
 
 This is getting complex. Now, the topology seems this:
 
+## Schema
+
 ```mermaid
 flowchart LR
     publiserA -- core.warning --> Exchange
@@ -11,6 +13,8 @@ flowchart LR
     Exchange -- *.critical --> SubscriberB
     Exchange -- kern.* --> SubscriberC
 ```
+
+## Running
 
 So we need 3 subscribers and 3 publishers, eoch of them in its own shell:
 

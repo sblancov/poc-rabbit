@@ -1,10 +1,14 @@
 # Hello world
 
+## Schema
+
 ```mermaid
 flowchart LR
     Producer --> Queue
     Queue --> Consumer
 ```
+
+## Running
 
 On one shell execute:
 

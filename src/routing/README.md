@@ -1,5 +1,7 @@
 # Routing
 
+## Schema
+
 This example is a little more complex. We need 2 publishers and 3 consumers to
 see what happens here.
 
@@ -11,6 +13,8 @@ flowchart LR
     Exchange -- error --> SubscriberB
     Exchange -- warning AND error --> SubscriberC
 ```
+
+## Running
 
 So, before to run publishers, it is convenient to run subscribers, then the
 publishers. Execute each of these command on a different shell:
