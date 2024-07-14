@@ -2,8 +2,9 @@
 
 This project aims to know a little better a useful tool called
 RabbitMQ. It can be use to follow some patterns easily:
-- Consumer Producer
-- Publish Subscribe
+- [Producer Consumer](https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem)
+- [Publish Subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
+- [Master Slave](https://en.wikipedia.org/wiki/Master%E2%80%93slave_(technology))
 
 RabbitMQ is distributed and scalable.
 
@@ -13,6 +14,7 @@ It is a great started point.
 This project can be useful for you to test RabbitMQ running
 everything in Docker. Then, you do not need to install anything
 more than Docker. Enjoy!
+
 
 ## Run PoC locally
 
