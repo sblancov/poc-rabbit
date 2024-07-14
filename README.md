@@ -55,13 +55,13 @@ messages received in the receive process shell.
 
 ## Work Queues
 
-On one shell execute:
+On one shell, execute:
 
     make run-worker
 
 This is a worker, which is listening to receive a job to do.
 
-On other shell execute:
+On other shell, execute:
 
     make run-new-task
 
@@ -77,6 +77,21 @@ Then, in other shell:
     make run-multiple-new-task
 
 This runs 10 tasks, and all workers receives in order to finish the work.
+
+
+## Publish Subscribe
+
+On multiple shells, execute:
+
+    make run-subscriber
+
+So we create several subscriber which receive the same message.
+
+Then, on other shell, execute:
+
+    make run-publisher
+
+Which publish a message. This message is shown in the all running subscribers.
 
 
 ## More info
