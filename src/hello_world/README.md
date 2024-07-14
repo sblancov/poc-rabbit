@@ -1,5 +1,11 @@
 # Hello world
 
+```mermaid
+flowchart LR
+    Producer --> Queue
+    Queue --> Consumer
+```
+
 On one shell execute:
 
     make run-receive

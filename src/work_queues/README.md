@@ -1,5 +1,14 @@
 # Work Queues
 
+
+```mermaid
+flowchart LR
+    Master --> Exchange
+    Exchange --> SlaveA
+    Exchange --> SlaveB
+```
+
+
 On one shell, execute:
 
     make run-worker

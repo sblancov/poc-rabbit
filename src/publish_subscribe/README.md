@@ -1,5 +1,13 @@
 # Publish Subscribe
 
+```mermaid
+flowchart LR
+    publiserA --> Exchange
+    Exchange --> SubscriberA
+    Exchange --> SubscriberB
+    Exchange --> SubscriberC
+```
+
 On multiple shells, execute:
 
     make run-subscriber

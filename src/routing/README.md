@@ -3,6 +3,15 @@
 This example is a little more complex. We need 2 publishers and 3 consumers to
 see what happens here.
 
+```mermaid
+flowchart LR
+    publiserA -- warning --> Exchange
+    publiserB -- error--> Exchange
+    Exchange -- warning --> SubscriberA
+    Exchange -- error --> SubscriberB
+    Exchange -- warning AND error --> SubscriberC
+```
+
 So, before to run publishers, it is convenient to run subscribers, then the
 publishers. Execute each of these command on a different shell:
 
