@@ -11,3 +11,8 @@ Then, on other shell, execute:
     make run-publisher
 
 Which publish a message. This message is shown in the all running subscribers.
+
+
+## References
+
+* https://www.rabbitmq.com/tutorials/tutorial-three-python

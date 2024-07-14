@@ -22,3 +22,8 @@ Then, in other shell:
     make run-multiple-new-task
 
 This runs 10 tasks, and all workers receives in order to finish the work.
+
+
+## References
+
+* https://www.rabbitmq.com/tutorials/tutorial-two-python

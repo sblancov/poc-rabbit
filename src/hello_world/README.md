@@ -13,3 +13,8 @@ On other shell execute:
 
 You can execute multiple times the send process, to see multiple
 messages received in the receive process shell.
+
+
+## References
+
+* https://www.rabbitmq.com/tutorials/tutorial-one-python
