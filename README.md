@@ -42,6 +42,7 @@ appropriate steps in each README.md:
 * [Publish Subscribe](./src/publish_subscribe/README.md)
 * [Routing](./src/routing/README.md)
 * [Topics](./src/topics/README.md)
+* [RPC](./src/rpc/README.md)
 
 
 ## More info
